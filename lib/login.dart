@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:rozhcecybershool/homepage.dart';
 import 'package:rozhcecybershool/login/inputdata.dart';
 import 'package:rozhcecybershool/login/header.dart';
-// import 'login/inputfield.dart';
+import 'package:rozhcecybershool/model/login.dart';
 
 class Loginpages extends StatefulWidget {
-  const Loginpages({Key? key}) : super(key: key);
+  const Loginpages({Key? key, String? password, required String username})
+      : super(key: key);
 
   @override
   _LoginpagesState createState() => _LoginpagesState();
 }
 
 class _LoginpagesState extends State<Loginpages> {
+  void ChkLoginstate() {
+    if (getLoginState() != 1) {
+      () => Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => const Home()));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +29,17 @@ class _LoginpagesState extends State<Loginpages> {
         height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              colors: [Color(0xFFFAA830), Color(0xFFFDC830)]),
+            begin: Alignment.topCenter,
+            colors: [
+              Color(0xFF6034BB),
+              Color(0xFF7142CE),
+            ],
+          ),
         ),
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 100,
+              height: 90,
             ),
             const Header(),
             Expanded(
@@ -35,8 +48,8 @@ class _LoginpagesState extends State<Loginpages> {
                 decoration: const BoxDecoration(
                   color: Color(0xfffffafa),
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(70),
-                    topRight: Radius.circular(70),
+                    topLeft: Radius.circular(60),
+                    topRight: Radius.circular(60),
                   ),
                 ),
                 child: const InputData(),

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:rozhcecybershool/login.dart';
 
-//import 'package:rozhcecybershool/model/login.dart';
-
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  final String username, password;
+  const Home({
+    Key? key,
+    required this.username,
+    required this.password,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +29,15 @@ class Home extends StatelessWidget {
       ),
       drawer: Drawer(
         child: Column(
-          children: const [
+          children: [
             UserAccountsDrawerHeader(
               accountName: Text(
-                'username',
-                style: TextStyle(fontStyle: FontStyle.italic),
+                username,
+                style: const TextStyle(fontStyle: FontStyle.italic),
               ),
-              accountEmail: Text('password'),
+              accountEmail: Text(password),
               currentAccountPicture:
-                  Icon(Icons.person, size: 76, color: Colors.white),
+                  const Icon(Icons.person, size: 76, color: Colors.white),
             )
           ],
         ),

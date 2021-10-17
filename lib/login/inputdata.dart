@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rozhcecybershool/homepage.dart';
+import 'package:rozhcecybershool/login.dart';
 
 // Define a custom Form widget.
 class InputData extends StatefulWidget {
@@ -24,26 +24,26 @@ class InputDataState extends State<InputData> {
             Container(
               padding: const EdgeInsets.fromLTRB(5, 5, 5, 0),
               decoration: const BoxDecoration(
-                border: Border(bottom: BorderSide(color: Color(0xffD98C00))),
+                border: Border(bottom: BorderSide(color: Color(0xFF7142CE))),
               ),
               child: TextField(
                 controller: _username,
                 decoration: const InputDecoration(
                     hintText: "Enter Email",
-                    hintStyle: TextStyle(color: Colors.orange),
+                    hintStyle: TextStyle(color: Color(0xFF7142CE)),
                     border: InputBorder.none),
               ),
             ),
             Container(
               padding: const EdgeInsets.fromLTRB(5, 15, 5, 0),
               decoration: const BoxDecoration(
-                border: Border(bottom: BorderSide(color: Color(0xffD98C00))),
+                border: Border(bottom: BorderSide(color: Color(0xFF7142CE))),
               ),
               child: TextField(
                 controller: _password,
                 decoration: const InputDecoration(
                   hintText: "Enter Password",
-                  hintStyle: TextStyle(color: Colors.orange),
+                  hintStyle: TextStyle(color: Color(0xFF7142CE)),
                   border: InputBorder.none,
                 ),
               ),
@@ -53,7 +53,7 @@ class InputDataState extends State<InputData> {
               child: const Text(
                 "Forgot Password",
                 style: TextStyle(
-                  color: Colors.orange,
+                  color: Color(0xFF7142CE),
                 ),
               ),
             ),
@@ -62,7 +62,7 @@ class InputDataState extends State<InputData> {
               width: 300,
               margin: const EdgeInsets.fromLTRB(5, 20, 5, 20),
               decoration: BoxDecoration(
-                color: const Color(0xFFFAA830),
+                color: const Color(0xFF7142CE),
                 borderRadius: BorderRadius.circular(50),
               ),
               child: TextButton(
@@ -72,7 +72,7 @@ class InputDataState extends State<InputData> {
                 ),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Home(
+                      builder: (context) => Loginpages(
                           username: _username.text, password: _password.text)));
                 },
                 child: const Text(

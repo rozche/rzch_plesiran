@@ -16,15 +16,15 @@ class Header extends StatelessWidget {
               style: TextStyle(
                   fontFamily: 'UrbanistBold',
                   color: Colors.white,
-                  fontSize: 38),
+                  fontSize: 40),
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           Center(
             child: Text(
-              "Welcome to Inside",
+              "Start to Explore",
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           ),
