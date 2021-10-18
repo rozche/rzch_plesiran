@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
-            colors: [Color(0xFFFDC830), Color(0xFFFDDC30)],
+            colors: [Color(0xFFF1EEF9), Color(0xFFF1EEF9)],
           ),
         ),
         child: Column(
@@ -43,9 +43,9 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset(
               'assets/images/logo_sp.png',
-              width: 120.0,
-              height: 120.0,
-              fit: BoxFit.cover,
+              width: 150.0,
+              height: 150.0,
+              fit: BoxFit.contain,
             ),
           ],
         ),

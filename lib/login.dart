@@ -5,7 +5,7 @@ import 'package:rozhcecybershool/login/header.dart';
 import 'package:rozhcecybershool/model/login.dart';
 
 class Loginpages extends StatefulWidget {
-  const Loginpages({Key? key, String? password, required String username})
+  const Loginpages({Key? key, String? password, String? username})
       : super(key: key);
 
   @override
@@ -13,7 +13,7 @@ class Loginpages extends StatefulWidget {
 }
 
 class _LoginpagesState extends State<Loginpages> {
-  void ChkLoginstate() {
+  void chkLoginstate() {
     if (getLoginState() != 1) {
       () => Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => const Home()));

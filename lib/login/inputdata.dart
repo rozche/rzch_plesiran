@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rozhcecybershool/login.dart';
+import 'package:rozhcecybershool/homepage.dart';
 
 // Define a custom Form widget.
 class InputData extends StatefulWidget {
@@ -71,9 +71,8 @@ class InputDataState extends State<InputData> {
                       MaterialStateProperty.all<Color>(Colors.white),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Loginpages(
-                          username: _username.text, password: _password.text)));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const Home()));
                 },
                 child: const Text(
                   'Login',
