@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:rozhcecybershool/login.dart';
-
-//import 'package:rozhcecybershool/model/login.dart';
+import 'package:flutter/services.dart';
+import 'package:rozhcecybershool/model/sidebar.dart';
+import 'package:rozhcecybershool/splashscreen.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,22 +9,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF6034BB),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Loginpages()),
-                );
-              },
-              icon: const Icon(
-                Icons.logout,
-                color: Color(0xFFFFFFFF),
-              ))
-        ],
-      ),
       drawer: Drawer(
         child: Column(
           children: [
@@ -32,7 +16,7 @@ class Home extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Color(0xFF6034BB),
                 borderRadius:
-                    BorderRadius.only(bottomRight: Radius.circular(60)),
+                    BorderRadius.only(bottomRight: Radius.circular(40)),
               ),
               accountName: Text(
                 'Username',
@@ -42,35 +26,47 @@ class Home extends StatelessWidget {
                 'Email',
                 style: TextStyle(fontSize: 15, color: Color(0xFFFFFFFF)),
               ),
-              currentAccountPicture:
-                  Icon(Icons.person, size: 76, color: Colors.white),
-            ),
-            Container(
-              height: 50,
-              padding: const EdgeInsets.all(15),
-              margin: const EdgeInsets.only(bottom: 10.0),
-              // margin: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-              decoration: const BoxDecoration(
-                color: Colors.transparent,
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    child: const Icon(
-                      Icons.bookmark_add_outlined,
-                      size: 30,
-                    ),
-                    margin: const EdgeInsets.only(right: 5),
-                  ),
-                  const Text(
-                    'User Profile',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ],
+              currentAccountPicture: CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Color(0xFF778899),
+                backgroundImage: AssetImage("assets/images/avatar.jpg"),
               ),
             ),
+            //SIDEBAR MENU LIST
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const SplashScreen(),
+                  ),
+                );
+              },
+              child: SideBar(
+                  title: 'Home', icon: const Icon(Icons.bookmark_add_outlined)),
+            ),
+
+            SideBar(title: 'Profile', icon: const Icon(Icons.ac_unit)),
           ],
         ),
+      ),
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: const Center(
+          child: Text(
+            'Plesiran.com',
+            style: TextStyle(color: Colors.white, letterSpacing: 1),
+          ),
+        ),
+        backgroundColor: const Color(0xFF6034BB),
+        actions: [
+          IconButton(
+              onPressed: () {
+                SystemNavigator.pop();
+              },
+              icon: const Icon(
+                Icons.logout,
+              ))
+        ],
       ),
       body: Center(
         child: Column(
