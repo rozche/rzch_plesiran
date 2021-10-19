@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rozhcecybershool">
+    package="com.androi.plesiran">
    <application
-        android:label="Cyber School"
+        android:label="Plesiran"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

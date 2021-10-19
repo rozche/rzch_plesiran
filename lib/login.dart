@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rozhcecybershool/homepage.dart';
-import 'package:rozhcecybershool/login/inputdata.dart';
-import 'package:rozhcecybershool/login/header.dart';
-import 'package:rozhcecybershool/model/login.dart';
+import 'package:plesiran/homepage.dart';
+import 'package:plesiran/login/inputdata.dart';
+import 'package:plesiran/login/header.dart';
+import 'package:plesiran/model/login.dart';
 
 class Loginpages extends StatefulWidget {
   const Loginpages({Key? key, String? password, String? username})
