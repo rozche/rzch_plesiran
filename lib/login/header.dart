@@ -16,7 +16,7 @@ class Header extends StatelessWidget {
               style: TextStyle(
                   fontFamily: 'UrbanistBold',
                   color: Colors.white,
-                  fontSize: 40),
+                  fontSize: 50),
             ),
           ),
           SizedBox(

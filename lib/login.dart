@@ -28,10 +28,15 @@ class _LoginpagesState extends State<Loginpages> {
         width: double.infinity,
         height: double.infinity,
         decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage(
+                'assets/images/bg_login.jpg',
+              ),
+              fit: BoxFit.fitHeight),
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             colors: [
-              Color(0xFF6034BB),
+              Color(0x006034BB),
               Color(0xFF7142CE),
             ],
           ),
@@ -44,6 +49,8 @@ class _LoginpagesState extends State<Loginpages> {
             const Header(),
             Expanded(
               child: Container(
+                width: double.infinity,
+                height: double.infinity,
                 padding: const EdgeInsets.fromLTRB(40, 50, 40, 10),
                 decoration: const BoxDecoration(
                   color: Color(0xfffffafa),
