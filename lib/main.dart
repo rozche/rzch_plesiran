@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plesiran/splashscreen.dart';
+import 'package:plesiran/destination.dart';
 import 'package:flutter/services.dart';
 
 void main() {
@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Urbanist',
         primarySwatch: Colors.orange,
       ),
-      home: const SplashScreen(),
+      home: const Destionations(),
+      // home: const SplashScreen(),
     );
   }
 }
