@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:plesiran/destination.dart';
 import 'package:plesiran/model/sidebar.dart';
-import 'package:plesiran/splashscreen.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const SplashScreen(),
+                    builder: (context) => const Destionations(),
                   ),
                 );
               },

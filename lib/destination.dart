@@ -51,7 +51,7 @@ class _DestionationsState extends State<Destionations> {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 5),
+                            margin: const EdgeInsets.only(top: 5),
                             child: const Text(
                               " XLorem Ipsum is simply \n dummy text of the printing and\n typesetting industry. ",
                               style: TextStyle(
